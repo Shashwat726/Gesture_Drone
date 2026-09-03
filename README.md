@@ -29,3 +29,21 @@ Phase A — Software & Vision (Day 9/160)
 ## Build Log
 Started: May 2025
 Target: First flight in 160 days
+
+## Progress
+
+### Section 1 (Days 1-11) — Complete
+- Phone camera streaming via DroidCam
+- Frame annotation, snapshot/recording
+- Clean function-based structure
+
+### Section 2 (Days 12-19) — Complete
+- HSV color masking, thresholding (simple/Otsu/adaptive)
+- Morphological ops (erosion, dilation, opening, closing)
+- Contour detection, bounding boxes, centroids
+- ROI cropping, Canny edge detection, background subtraction
+- Performance profiling — confirmed WiFi capture is the bottleneck, not CV processing
+- Milestone: working end-to-end color-blob tracker (object_tracker.py)
+
+### Section 3 (Days 20-30) — Starting
+- MediaPipe hand landmark detection
