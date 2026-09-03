@@ -1,0 +1,24 @@
+Day 5: 
+Linked the phone's camera feed to laptop via python script.
+Got around 10-70 fps with on average 30-40 frams per second
+10 fps means 100ms, then taking into consideration the time taken by esp32 and command chain, I should expect a delay of around 200-300 ms, so, there is a high chance of drone freezing mid commands with this latency
+Rather than continuous commands, I can give commands like "Rise", "Increase height", "Change shooting angle (Move from front to my left)", "Start/ Stop recording", "360 (Shoot a complete 360 view around me )", "Follow (Chamge shooting angle toawards my back and start following me (without changing the current height))" and finally, "Rest"
+These are just demo commands which I have thought for now, might increase or decrease them depending on how the project proceeds 
+
+Day 10:
+Section 1 is over, so far I can transfer phone's feed to my laptop 
+Learned about how to add, and position, lines, rectangle and circle in the feed window with different colours and thickness
+Not sure about how using a third party app URL to transfer the camera feed to laptop is reliable and useful, as I can't take laptop everywhere while flying but I guess it's just for me to learn the how python scripts work
+Learned that i have to open the terminal in the exact folder for the in flight captures to be saved properly
+Excited for Section (Phase) 2 of the project
+
+Day 18:
+Day 18 - Performance Profiling
+Capture (phone->laptop via WiFi): ~29.6ms avg (jittery, ranged 10-90ms per-frame)
+HSV convert: ~0.9ms avg
+Mask (inRange): ~0.7ms avg
+Contour find: ~0.5ms avg
+
+Bottleneck: Capture (WiFi network hop), by far — 15-40x the cost of all CV processing combined
+Takeaway: CV processing itself is nearly free; the real cost is getting the frame off the phone over WiFi in the first place. 
+It confirms the final on-phone pipeline design (no laptop hop) should eliminate this bottleneck entirely.
