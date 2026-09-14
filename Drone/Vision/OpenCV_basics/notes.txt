@@ -22,3 +22,9 @@ Contour find: ~0.5ms avg
 Bottleneck: Capture (WiFi network hop), by far — 15-40x the cost of all CV processing combined
 Takeaway: CV processing itself is nearly free; the real cost is getting the frame off the phone over WiFi in the first place. 
 It confirms the final on-phone pipeline design (no laptop hop) should eliminate this bottleneck entirely.
+
+Day 20
+Created multiple files 
+Learnt multiple things like contours, morphology, roi, thresholding, edges Canny edge detection
+Still not sure about morphology as i couldn't identify the difference between closing and opening though I understand erosion and dilation.
+Combined everything I learned in a script that tracks the largest blue object on a screen greater then a threshold size and displays its position wrt to frame.

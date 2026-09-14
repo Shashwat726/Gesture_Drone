@@ -1,0 +1,25 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+
+# MacOS
+.DS_Store
+
+# Personal notes and tracking
+DroneChecklist.jsx
+notes.txt

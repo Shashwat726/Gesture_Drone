@@ -20,11 +20,11 @@ A drone that responds to hand gestures, built from scratch.
 - Betaflight + MSP protocol (flight controller comms)
 
 ## Current Status
-Phase A — Software & Vision (Day 9/160)
+Phase A — Software & Vision (Day 30/160)
 - [x] Phone camera feed streaming to Python over WiFi
 - [x] Live annotations — FPS counter, crosshair, border
 - [x] Snapshot and timestamped video recording
-- [ ] MediaPipe hand tracking (next)
+- [x] **MediaPipe hand tracking & Custom Gesture Engine (Completed!)**
 
 ## Build Log
 Started: May 2025
@@ -45,5 +45,10 @@ Target: First flight in 160 days
 - Performance profiling — confirmed WiFi capture is the bottleneck, not CV processing
 - Milestone: working end-to-end color-blob tracker (object_tracker.py)
 
-### Section 3 (Days 20-30) — Starting
-- MediaPipe hand landmark detection
+### Section 3 (Days 20-30) — Complete
+- Integrated MediaPipe Hand Tracking (Modern Tasks API)
+- Extracted 21 3D hand landmarks for real-time finger state analysis
+- **Jedi Interface Built:** HOVER (Open), FIST LOCK (Position Track), ARISE/LAND (Dynamic Velocity), PHOTO/VIDEO (Pinch), 360 ORBIT (Circle Path)
+- Engineered a universal proportional "palm length" baseline to solve 3D perspective distortion (the grabbing angle)
+- Built Exponential Moving Average (EMA) filters for buttery smooth altitude/velocity tracking
+- Designed Temporal Smoothing (Mode filtering/Debouncing) to completely eliminate false positives and camera noise

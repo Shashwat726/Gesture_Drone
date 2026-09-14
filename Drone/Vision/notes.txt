@@ -1,6 +1,0 @@
-Day 5: 
-Linked the phone's camera feed to laptop via python script.
-Got around 10-70 fps with on average 30-40 frams per second
-10 fps means 100ms, then taking into consideration the time taken by esp32 and command chain, I should expect a delay of around 200-300 ms, so, there is a high chance of drone freezing mid commands with this latency
-Rather than continuous commands, I can give commands like "Rise", "Increase height", "Change shooting angle (Move from front to my left)", "Start/ Stop recording", "360 (Shoot a complete 360 view around me )", "Follow (Chamge shooting angle toawards my back and start following me (without changing the current height))" and finally, "Rest"
-These are just demo commands which I have thought for now, might increase or decrease them depending on how the project proceeds 
