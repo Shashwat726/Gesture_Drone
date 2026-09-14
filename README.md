@@ -27,7 +27,7 @@ Phase A — Software & Vision (Day 30/160)
 - [x] **MediaPipe hand tracking & Custom Gesture Engine (Completed!)**
 
 ## Build Log
-Started: May 2025
+Started: August 2025
 Target: First flight in 160 days
 
 ## Progress
